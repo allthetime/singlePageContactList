@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="./stylesheets/index.css" />
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<header>
+  <button id="all" style="display:none;">All Contacts</button>
+  <button id="add">+</button>
+  <button id="search"></button>
+  <input id="search-field" type="search"/>
+</header>
+
+<table id="contact_table">
+  <tr>
+    <th>FIRST</th>
+    <th>LAST</th>
+    <th>EMAIL</th>
+    <th>PHONE</th>
+    <th>GITHUB</th> 
+    <th></th>        
+  </tr>
+</table>
+
+<footer></footer>
+
+<div id="add-form">
+  <button id="close-button">x</button>
+  <form id="add-form-data">
+    <input type="text" id="first_name" name="first_name" placeholder="first name" /><br>
+    <input type="text" id="last_name" name="last_name" placeholder="last name" /><br>
+    <input type="text" id="email_address" name="email" placeholder="email" /><br>
+    <input type="text" name="phone_number" placeholder="phone number" /><br>
+    <input type="text" name="github" placeholder="github" /><br>
+    <input type="submit" />
+  </form>
+</div>
+
+<div class="cover"></div>
+
+
+<script src="./javascript/index.js"></script>
