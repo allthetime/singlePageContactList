@@ -1,3 +1,8 @@
+/logs
+/pids
+/logs/*
+/pids/*
+/unicorn.rb
 /config/database.rb
 .env
 .bundle
