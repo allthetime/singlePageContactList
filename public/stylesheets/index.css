@@ -195,8 +195,8 @@ td input[type="text"]{
   margin-right:-100px;
   background:none !important;
   border:none !important;
-  font-size:1em;
-    font-family: Verdana;
+  /*font-size:1em;*/
+  font-family: Verdana;
 }
 
 *:focus{
