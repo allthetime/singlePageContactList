@@ -196,6 +196,7 @@ td input[type="text"]{
   background:none !important;
   border:none !important;
   font-size:1em;
+    font-family: Verdana;
 }
 
 *:focus{
