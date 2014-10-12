@@ -1,5 +1,5 @@
 // LOADS CONTACTS FROM API
-  $.getJSON('/',function(data){ 
+  $.getJSON('/contacts/info',function(data){ 
     $.each(data, function(index,contact){
       addContactRow(contact);
     });
@@ -29,7 +29,7 @@ $('table').on('click',function(e){
     if ( contactColumn[0].classList[0] == "delete" ){
       id = contactColumn.parent()[0].id.split('row')[1]
       contactColumn.parent().remove()
-      $.post('/destroy/'+id)
+      $.post('/contacts/destroy/'+id)
       return false;
     }
     info = contactColumn.text()
@@ -47,7 +47,7 @@ $('table').on('click',function(e){
         id = contactColumn.parent()[0].id.split('row')[1]
         column = contactColumn[0].classList[0]
         console.log(column)
-        $.post('/edit/'+id+'?column='+column+'&value='+contactColumn.children()[0].value)
+        $.post('/contacts/edit/'+id+'?column='+column+'&value='+contactColumn.children()[0].value)
         contactColumn.blur()
       }
     })
@@ -73,7 +73,7 @@ $('#search-field').on('keyup',function(e){
     return false;
   }
   $.ajax({
-    url: '/find/'+$(this).val(),
+    url: '/contacts/find/'+$(this).val(),
     dataType: 'json',
     success: function( data ) {
       $('tr').slice(1).css({display: 'none'})
@@ -118,7 +118,7 @@ $('#add-form-data').on('submit',function(e){
    return false;
   }    
   e.preventDefault;
-  $.post('/?'+$(this).serialize(), function(contact){
+  $.post('/contacts/?'+$(this).serialize(), function(contact){
     addContactRow(contact);
     $("html, body").animate({ scrollTop: $(document).height() },200);
   })

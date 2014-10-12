@@ -1,5 +1,9 @@
 
-get '/' do
+get "/" do
+  File.read(File.join('public', 'index.html'))
+end
+
+get '/info' do
   content_type :json
   contacts_json = Contact.all.order(:last_name).to_json
 end
