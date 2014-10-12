@@ -191,7 +191,7 @@ input[type="search"]{
 
 td input[type="text"]{
   width:100% !important;
-  margin:-10px 0;
+  margin:-10px;
   margin-right:-100px;
   background:none !important;
   border:none !important;
