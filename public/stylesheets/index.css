@@ -195,7 +195,7 @@ td input[type="text"]{
   margin-right:-100px;
   background:none !important;
   border:none !important;
-  /*font-size:1em;*/
+  font-size:0.8em;
   font-family: Verdana;
 }
 
